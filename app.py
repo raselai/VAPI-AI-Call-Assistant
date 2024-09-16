@@ -4,7 +4,7 @@ import requests
 def send_call(customer_name, customer_number):
     url = "https://api.vapi.ai/call/phone"
     payload = {
-        "phoneNumberId": "34d4d174-22d7-4233-876b-bcb3f05a5a65",
+        "phoneNumberId": "Your Phone Number ID",
         "customer": {
             "number": customer_number,
             "name": customer_name
@@ -58,7 +58,7 @@ def send_call(customer_name, customer_number):
         }
     }
     headers = {
-        "Authorization": "Bearer 19d11af3-e60e-4763-9574-b502b71ef8b2",
+        "Authorization": "Your Bapi API key",
         "Content-Type": "application/json"
     }
     response = requests.request("POST", url, json=payload, headers=headers)
